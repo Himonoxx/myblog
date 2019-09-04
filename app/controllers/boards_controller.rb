@@ -3,14 +3,18 @@ class BoardsController < ApplicationController
     end
     
     def new
-        @board = Board.new
+        @board = Board.all.order(created_at: 'desc')
+        @b_count = Board.count
     end
     
     def create
         # render plain: params[:board].inspect
         @board = Board.new(board_params)
-        @board.save
-        redirect_to boards_path
+        if @board.save
+            redirect_to boards_path
+        else
+            render plain: @board.errors.inspect
+        end
     end
     
     def show

@@ -1,0 +1,7 @@
+{
+"version": 3,
+"mappings": "AAAA,IAAI;EACA,UAAU,EAAC,MAAM;EACjB,SAAS,EAAC,IAAI",
+"sources": ["board_index.scss"],
+"names": [],
+"file": "board_index.css"
+}

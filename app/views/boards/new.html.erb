@@ -1,0 +1,29 @@
+<div>
+  <h4><%= flash[:success] %></h4>
+  <h4><%= flash[:notice] %></h4>
+</div>
+
+<h1 class="ttl midashi">新規作成</h1>
+<%= form_for(@board) do |f| %>
+   
+    <div class="field">
+        <%= f.label :name %><br>
+        <%= f.text_field :name %>
+    </div>
+    
+    <div class="field">
+        <%= f.label :title %><br>
+        <%= f.text_field :title %>
+    </div>
+    
+    <div class="field">
+        <%= f.label :body %><br>
+        <%= f.text_field :body %>
+    </div>
+    
+    <div class="actions">
+        <%= f.submit %>
+    </div>
+<% end %>
+    
+    
